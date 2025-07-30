@@ -37,7 +37,7 @@ price = st.number_input("Price ($)", min_value=0.0)
 size = st.number_input("Size (MB)", min_value=0.0)
 installs = st.number_input("Number of Installs", min_value=0)
 
-category = st.selectbox("App Category", ['No Category'] + all_categories)
+category = st.selectbox("App Category", all_categories)
 category_encoded = [1 if category == cat else 0 for cat in all_categories]
 
 input_data = np.array([[reviews, price, size, installs]+ category_encoded])
