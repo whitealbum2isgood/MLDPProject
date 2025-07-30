@@ -22,13 +22,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png", width=200)
-
 st.markdown("### Predict how users will rate your Android app 📱")
 
 st.title("Google Play App Rating Predictor")
 
-model = joblib.load("test_test_rating_model.pkl")
+model = joblib.load("rating_model.pkl")
 
 all_categories = ['ART', 'AUTOMOTIVE', 'BUSINESS', 'COMMUNICATION', 'EDUCATION',
                   'ENTERTAINMENT', 'HEALTH', 'LIFESTYLE', 'SHOPPING',
