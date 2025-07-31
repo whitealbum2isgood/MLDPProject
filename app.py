@@ -25,7 +25,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Google Play App Rating Predictor")
+st.title("📱 Google Play App Rating Predictor")
 st.markdown("Use this tool to estimate the expected rating of your Android app based on key information.")
 st.markdown("---")
 
@@ -35,7 +35,7 @@ all_categories = ['ART', 'AUTOMOTIVE', 'BUSINESS', 'COMMUNICATION', 'EDUCATION',
                   'ENTERTAINMENT', 'HEALTH', 'LIFESTYLE', 'SHOPPING',
                   'TRAVEL', 'SYSTEM']
 
-st.subheader("App Details")
+st.subheader("🔧 App Details")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -53,7 +53,7 @@ input_data = np.array([[reviews, price, size, installs] + category_encoded])
 st.markdown("---")
 if st.button("Predict Rating"):
     prediction = model.predict(input_data)
-    st.success(f"Predicted Rating: **{prediction[0]:.2f} / 5.0**")
+    st.success(f"⭐ Predicted Rating: **{prediction[0]:.2f} / 5.0**")
 
 st.markdown("---")
 
